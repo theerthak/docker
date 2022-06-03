@@ -14,7 +14,7 @@ ADD https://www.free-css.com/assets/files/free-css-templates/download/page279/ic
 
 RUN unzip icream.zip 
 
-RUN cp -rvf ice-cream-shop-website-template/* . && rm -rf ice-cream-shop-website-template icream.zip
+RUN cp -rvf /home/ubuntu/ice-cream-shop-website-template/* . && rm -rf ice-cream-shop-website-template icream.zip
 
 CMD ["/usr/sbin/nginx", "-D", "FOREGROUND"]
 
