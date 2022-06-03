@@ -14,7 +14,7 @@ WORKDIR /var/www/html
 
 RUN unzip icream.zip 
 
-RUN cp -rvf ice-cream-shop-website-template/* /var/www/html && rm -rf ice-cream-shop-website-template icream.zip
+RUN cp -rvf ice-cream-shop-website-template/* . && rm -rf ice-cream-shop-website-template icream.zip
 
 CMD ["/bin/sh"]
 
