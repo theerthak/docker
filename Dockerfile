@@ -19,6 +19,6 @@ unzip icream.zip
 
 cp -rvf ice-cream-shop-website-template/* . && rm -rf ice-cream-shop-website-template icream.zip
 
-CMD ["/usr/sbin/nginx","-D","FOREGROUND"]
+CMD ["/usr/sbin/nginx", "-D", "FOREGROUND"]
 
 EXPOSE 80
