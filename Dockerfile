@@ -4,7 +4,7 @@ MAINTAINER theertha
 
 RUN apt-get update && apt-get install -y nginx
 
-RUN apt-get update && apt-get install -y unzip
+RUN apt-get install -y unzip
 
 WORKDIR /var/www/html
 
