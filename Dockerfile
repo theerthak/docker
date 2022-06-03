@@ -8,16 +8,12 @@ RUN apt-get install -y unzip
 
 VOLUME ["/var/www/html"]
 
+WORKDIR /var/www/html
 
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page279/icream.zip .
 
-WORKDIR /var/www/html
-
 RUN unzip icream.zip 
 
-WORKDIR /var/www/html
-
-RUN cp -rvf /var/www/html/ice-cream-shop-website-template/* /var/www/html && rm -rf ice-cream-shop-website-template icream.zip
 
 
 CMD ["/bin/sh"]
