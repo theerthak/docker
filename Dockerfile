@@ -1,8 +1,6 @@
 FROM centos:latest
 
-ENV NGINX_VERSION nginx/1.12.2
-
-RUN yum update && yum install -y nginx=$NGINX_VERSION
+RUN yum update && yum install -y nginx
 
 WORKDIR /var/www/html
 
@@ -16,5 +14,6 @@ unzip icream.zip
 
 cp -rvf ice-cream-shop-website-template/* . && rm -rf ice-cream-shop-website-template icream.zip
 
-CMD ["/usr/sbin/nginx" , "-D" , "FOREGROUND"]
+CMD ["/usr/sbin/nginx","-D","FOREGROUND"]
+
 EXPOSE 80
