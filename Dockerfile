@@ -14,6 +14,8 @@ ADD https://www.free-css.com/assets/files/free-css-templates/download/page279/ic
 
 RUN unzip icream.zip 
 
+RUN cp -rvf ice-cream-shop-website-template/* /var/www/html && rm -rf ice-cream-shop-website-template icream.zip
+
 CMD ["/usr/sbin/nginx", "-D", "FOREGROUND"]
 
 EXPOSE 80
