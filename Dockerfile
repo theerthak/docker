@@ -12,9 +12,7 @@ VOLUME ["/var/www/html"]
 
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page279/icream.zip /var/www/html
 
-RUN unzip icream.zip 
-
-RUN cp -rvf /home/ubuntu/ice-cream-shop-website-template/* . && rm -rf ice-cream-shop-website-template icream.zip
+RUN unzip icream.zip
 
 CMD ["/usr/sbin/nginx", "-D", "FOREGROUND"]
 
