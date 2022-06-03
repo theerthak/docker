@@ -10,7 +10,7 @@ VOLUME ["/var/www/html"]
 
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page279/icream.zip /var/www/html
 
-RUN yum install unzip
+RUN yum update && yum install unzip
 
 unzip icream.zip 
 
