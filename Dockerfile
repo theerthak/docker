@@ -1,9 +1,5 @@
 FROM centos:latest
 
-RUN useradd -ms /bin/bash theertha
-
-USER theertha
-
 ENV NGINX_VERSION nginx/1.12.2
 
 RUN yum update && yum install -y nginx=$NGINX_VERSION
