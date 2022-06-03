@@ -8,9 +8,10 @@ RUN apt-get install -y unzip
 
 VOLUME ["/var/www/html"]
 
-WORKDIR /var/www/html
 
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page279/icream.zip .
+
+WORKDIR /var/www/html
 
 RUN unzip icream.zip 
 
