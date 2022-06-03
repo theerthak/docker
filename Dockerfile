@@ -1,4 +1,4 @@
-FROM centos:latest
+FROM ubuntu:latest
 
 MAINTAINER theertha
 
@@ -8,7 +8,7 @@ RUN sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-*
 
 RUN sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-*
 
-RUN yum update && yum install -y nginx
+RUN apt-get update && apt-get install -y nginx
 
 WORKDIR /var/www/html
 
@@ -16,7 +16,7 @@ VOLUME ["/var/www/html"]
 
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page279/icream.zip /var/www/html
 
-RUN yum update && yum install unzip
+RUN apt-get update && apt-get install unzip
 
 unzip icream.zip 
 
